@@ -1,0 +1,16 @@
+[project]
+name = "pdf-to-text"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+dependencies = [
+    "openai",
+    "python-dotenv",
+    "PyMuPDF"
+]
+
+[project.scripts]
+transcribe = "src.main:main"
+
+[tool.uv]
+# Add uv configuration here
