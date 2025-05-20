@@ -36,19 +36,12 @@ pdf-to-text/
 1.  **Clone the repository (or set up the project files):**
     Ensure you have all the project files in your local directory.
 
-2.  **Create and activate a virtual environment using `uv`:**
+2.  **Install dependencies:**
     ```bash
-    uv venv
-    source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+    uv sync
     ```
 
-3.  **Install dependencies:**
-    ```bash
-    uv pip sync pyproject.toml
-    ```
-    (If a `uv.lock` file is present and up-to-date, you can also use `uv sync`)
-
-4.  **Set up your OpenAI API Key:**
+3.  **Set up your OpenAI API Key:**
     Create a file named `.env` in the root directory of the project and add your OpenAI API key to it:
     ```
     OPENAI_API_KEY="your_openai_api_key_here"
@@ -61,9 +54,9 @@ pdf-to-text/
     Copy the PDF files you want to transcribe into the `data/input` directory.
 
 2.  **Run the transcription script:**
-    Execute the script using the alias defined in `pyproject.toml`:
+    Execute the script:
     ```bash
-    uv run transcribe
+    uv run src/main.py
     ```
 
 3.  **Find the output:**

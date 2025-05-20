@@ -146,3 +146,6 @@ data/output/*
 
 # uv lock file
 uv.lock
+
+# Mac
+.DS_Store
